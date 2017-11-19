@@ -1,20 +1,23 @@
 import React, {Component,Proptypes} from 'react';
+import '../css/Screenshots.css';
 
 export default class Screenshots extends Component {
   constructor(props) {
     super(props);
-    this.state = { ends:
+    this.state = { img:
       {
-        frontend:NaN,
-        backend:NaN
+        src:'NaN'
       }
     };
   }
 
   componentDidMount() {
-    fetch('/reacteer')
-      .then(res => res.json())
-      .then(ends => this.setState({ends}));
+    fetch('/imgages/klikk_.png')
+      .then(res => res.blob())
+      .then(imgBlob => {
+        let objectURL = URL.createObjectURL(imgBlob);
+        this.setState({img: {src: objectURL}})}
+      );
   }
 
 
@@ -22,10 +25,8 @@ export default class Screenshots extends Component {
 
   render() {
     return (
-      <div className="reacteerTest">
-        <p>frontend: {this.state.ends.frontend}</p>
-        <p>backend: {this.state.ends.backend}</p>
-        <img src="/img"/>
+      <div className="screenshot">
+        <img className="shimg" src={new Image().src ="/images/klikk_.png"}/>
       </div>
     );
   }
