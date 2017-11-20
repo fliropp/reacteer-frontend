@@ -1,0 +1,28 @@
+div .screenshot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll {
+  width:70%;
+  position: relative;
+  -webkit-animation: klikkscroll 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: klikkscroll 25s infinite;
+  animation-duration: 25s;
+  animation-name: klikkscroll;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes klikkscroll {
+    from {top: 0px;}
+    to {bottom: 200px;}
+}
+
+@keyframes klikkscroll {
+    from {top: 0px;}
+    to {top:-5000px;}
+}
