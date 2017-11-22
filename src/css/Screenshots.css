@@ -23,12 +23,7 @@ div .screenshot {
 }
 
 @keyframes klikkscroll {
-    /*50% { from {top: 0px;}
-          to {top:-5000px;}
-        }
-    50% { from {top: 0px;}
-          to {top:-5000px;}
-        }*/
+  
       5% {
         transform: translate(0px, 0px);
       }
