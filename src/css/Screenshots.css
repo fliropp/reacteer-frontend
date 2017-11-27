@@ -1,8 +1,5 @@
 div .screenshot {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  width: 50%;
 }
 
 .scroll {
@@ -23,13 +20,13 @@ div .screenshot {
 }
 
 @keyframes klikkscroll {
-  
+
       5% {
         transform: translate(0px, 0px);
       }
       100% {
         /*opacity: 0; */
-        transform: translate(0px, -6000px);
+        transform: translate(0px, -3000px);
       }
       0% {
         opacity: 0;

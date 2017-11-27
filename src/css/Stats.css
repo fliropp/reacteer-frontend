@@ -1,0 +1,33 @@
+div .stats {
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  justify-content: left;
+  align-items: left;
+}
+
+div .urlentries {
+  width:75%;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+div .urlentries p{
+  text-align:left;
+  font-size:11px;
+
+}
+
+p .urlentry {
+  display:flex;
+  flex-direction: row;
+  font-size: 10px;
+  align-items:left;
+  justify-content: left;
+}
+
+p {
+
+}

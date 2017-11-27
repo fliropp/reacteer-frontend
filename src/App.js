@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import Screenshots from './components/Screenshots.js';
+import Stats from './components/Stats.js';
 
 class App extends Component {
 
@@ -15,8 +16,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Screenshots/>
-        <Stats/>
+        <Screenshots state={this.state}/>
+        <Stats state={this.state}/>
       </div>
     );
   }
