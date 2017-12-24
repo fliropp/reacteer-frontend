@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './css/App.css';
-import Screenshots from './components/Screenshots.js';
-import Stats from './components/Stats.js';
+import ScreenshotContainer from './containers/ScreenshotContainer.js';
+import StatsContainer from './containers/StatsContainer.js';
+
 
 class App extends Component {
 
-  constructor(props) {
+  /*constructor(props) {
     super(props);
     this.state = {
-      sections : ['', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi']
+      sections : ['', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi'],
+      idx: 0,
+      urlentries:"<div className='urlentries'> WAITING TO LOAD DATA</div>"
     }
-  }
+  }*/
 
   render() {
     return (
-      <div className="App">
-        <Screenshots state={this.state}/>
-        <Stats state={this.state}/>
-      </div>
+        <div className="App">
+          <ScreenshotContainer state={this.props}/>
+          <StatsContainer state={this.props}/>
+        </div>
     );
   }
 }

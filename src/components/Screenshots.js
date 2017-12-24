@@ -4,10 +4,10 @@ import '../css/Screenshots.css';
 export default class Screenshots extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    /*this.state = {
       sections : ['', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi'],
       idx: 0,
-    };
+    };*/
     this.scrollDone = this.scrollDone.bind(this);
     this.scrollIteration = this.scrollIteration.bind(this);
   }
@@ -26,21 +26,18 @@ export default class Screenshots extends Component {
 	}
 
   scrollDone () {
-    this.setState({
-      idx: 0
-    });
+    this.props.resetIndex();
   }
 
   scrollIteration () {
-    this.setState({
-      idx: this.state.idx + 1
-    });
+    this.props.incIndex();
+    this.props.fuff(this.props.reacteerState.idx);
   }
 
   render() {
     return (
       <div className="screenshot">
-        <img className='scroll' ref='kpage' src={new Image().src ='/images/klikk_' + this.state.sections[this.state.idx] + '.png'}/>
+        <img className='scroll' ref='kpage' src={new Image().src ='/images/klikk_' + this.props.reacteerState.sections[this.props.reacteerState.idx] + '.png'}/>
       </div>
     );
   }

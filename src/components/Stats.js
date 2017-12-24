@@ -2,13 +2,10 @@ import React, {Component,Proptypes} from 'react';
 import '../css/Stats.css';
 
 export default class Stats extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
-  }
+
 
   componentDidMount() {
-    fetch('/json/_.json')
+    fetch('/json/klikk_' + this.props.reacteerState.sections[this.props.reacteerState.idx] + '.json')
     .then(data => {
       return data.json();
     })
@@ -31,7 +28,7 @@ export default class Stats extends Component {
   render() {
     return (
       <div className="stats">
-        {this.state.urlentries}
+        {this.props.reacteerState.test.test}
       </div>
     );
   }
