@@ -13,7 +13,7 @@ const mapDispatchToProps = (dispatch) => ({
   resetIndex: () => {dispatch(actions.resetIndex())},
   setSections: () => { dispatch(actions.setSections()) },
   setUrls: () => { dispatch(actions.setUrlEntries()) },
-  fuff: (path) => {dispatch(actions.fetchUrlEntries(path)) },
+  fuff: (current_section) => {dispatch(actions.fetchUrlEntries(current_section)) },
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(Screenshot);

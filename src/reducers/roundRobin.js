@@ -6,16 +6,14 @@ const getInitState = () => {
   return {
     idx:0,
     sections:['', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi'],
-    urlentries:[],
-    test:'waiting for meme',
-    test_idx: 1
+    urlentries:[]
   }
 }
 
 const roundRobin = (state = getInitState(), action) => {
   switch (action.type) {
     case actions.INC_INDEX:
-      return {...state, idx: state.idx + 1}
+      return {...state, idx: (state.idx + 1) % state.sections.length}
     case actions.RESET_INDEX:
       return  { ...state, idx: 0 }
     case actions.SET_SECTIONS:

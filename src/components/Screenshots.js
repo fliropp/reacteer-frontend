@@ -4,26 +4,29 @@ import '../css/Screenshots.css';
 export default class Screenshots extends Component {
   constructor(props) {
     super(props);
-    /*this.state = {
-      sections : ['', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi'],
-      idx: 0,
-    };*/
     this.scrollDone = this.scrollDone.bind(this);
     this.scrollIteration = this.scrollIteration.bind(this);
+    this.scrollStart = this.scrollStart.bind(this);
   }
 
   componentDidMount() {
     const el = this.refs.kpage;
     el.addEventListener('animationend', this.scrollDone);
     el.addEventListener('animationiteration', this.scrollIteration);
+    el.addEventListener('animationstart', this.scrollStart);
   }
 
   componentWillUnmount () {
   	const el = this.refs.kpage
 		el.removeEventListener('animationend', this.scrollDone);
     el.removeEventListener('animationiteration', this.scrollIteration);
+    el.removeEventListener('animationstart', this.scrollStart);
 
 	}
+
+  scrollStart () {
+    this.props.fuff(this.props.reacteerState.sections[this.props.reacteerState.idx])
+  }
 
   scrollDone () {
     this.props.resetIndex();
@@ -31,7 +34,7 @@ export default class Screenshots extends Component {
 
   scrollIteration () {
     this.props.incIndex();
-    this.props.fuff(this.props.reacteerState.idx);
+    this.props.fuff(this.props.reacteerState.sections[this.props.reacteerState.idx]);
   }
 
   render() {

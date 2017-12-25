@@ -9,7 +9,7 @@ div .screenshot {
   /*animation: klikkscroll 25s infinite;*/
   animation-duration: 50s;
   animation-name: klikkscroll;
-  animation-iteration-count: 5;
+  /*animation-iteration-count: 5;*/
   animation-timing-function: ease-out;
 }
 

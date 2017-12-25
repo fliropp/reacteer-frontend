@@ -1,10 +1,11 @@
 import React, {Component,Proptypes} from 'react';
+import FourOfours from './subcomponents/FourOfours.js';
 import '../css/Stats.css';
 
 export default class Stats extends Component {
 
 
-  componentDidMount() {
+  /*componentDidMount() {
     fetch('/json/klikk_' + this.props.reacteerState.sections[this.props.reacteerState.idx] + '.json')
     .then(data => {
       return data.json();
@@ -23,12 +24,15 @@ export default class Stats extends Component {
       });
       this.setState({urlentries:urlentries});
     });
-  }
+  }*/
 
   render() {
     return (
       <div className="stats">
-        {this.props.reacteerState.test.test}
+        <div className="statsHeader">
+          {this.props.reacteerState.sections[this.props.reacteerState.idx]}
+        </div>
+        <FourOfours state={this.props}/>
       </div>
     );
   }
