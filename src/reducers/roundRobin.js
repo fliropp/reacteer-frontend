@@ -6,7 +6,9 @@ const getInitState = () => {
   return {
     idx:0,
     sections:['', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi'],
-    urlentries:[]
+    urlentries:[],
+    lighthouseData: {},
+    lhdActive : false,
   }
 }
 
@@ -20,10 +22,10 @@ const roundRobin = (state = getInitState(), action) => {
       return  { ...state, sections: action.sections }
     case actions.SET_URLENTRIES:
       return  { ...state, urlentries: action.urlentries }
-    case actions.SET_TEST:
-      return {...state, test: action.meme}
+    case actions.SET_LIGHTHOUSE_DATA:
+      return {...state, lighthouseData: action.lhd}
     case actions.SET_ERROR:
-      return {state, test:  action.error}
+      return {state, test: action.error}
     default:
       return state
   }

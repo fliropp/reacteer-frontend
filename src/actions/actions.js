@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
-
 export const INC_INDEX =  'INC_INDEX';
 export const SET_SECTIONS = 'SET_SECTIONS';
 export const SET_URLENTRIES = 'SET_URLENTRIES';
 export const RESET_INDEX = 'RESET_INDEX';
 export const SET_TEST = 'SET_TEST';
 export const SET_ERROR = 'SET_ERROR';
+export const SET_LIGHTHOUSE_DATA = 'SET_LIGHTHOUSE_DATA';
 
 export const incIndex  = () => {
   return { type: INC_INDEX };
@@ -24,8 +24,8 @@ export const setUrlEntries = (urlentries) => {
   return {type: SET_URLENTRIES, urlentries}
 }
 
-export const setTest = (meme) => {
-  return {type: SET_TEST, meme}
+export const setLightHouseData = (lhd) => {
+  return {type: SET_LIGHTHOUSE_DATA, lhd}
 }
 
 export const setError = (err) => {
@@ -34,22 +34,10 @@ export const setError = (err) => {
 
 export const fetchUrlEntries = (current_section) => {
   return (dispatch) => {
-   return fetchUrlsFromFrontend(current_section)
+   return fetchUrlsFromBackend(current_section)
    .then(data => {
      return data.json();
    })
-   /*.then(json => {
-     return json.map((entry) => {
-       return(
-         <div className='urlentry'>
-           <p className='urltxt'>link txt: {entry[0]}</p>
-           <p className='url'>url: {entry[1]}</p>
-           <p className='status'>http status: {entry[2]}</p>
-           <p> {}
-         </div>
-       )
-     });
-   })*/
    .then(
      json => dispatch(setUrlEntries(json)),
      error => dispatch(setError(error))
@@ -57,7 +45,23 @@ export const fetchUrlEntries = (current_section) => {
  };
 }
 
+export const fetchLightHouseData = (current_section) => {
+  return (dispatch) => {
+    return fetchLighouseDataFromBackend(current_section)
+    .then(data => {
+      return data.json();
+    })
+    .then(
+      json => dispatch(setLightHouseData(json)),
+      error => dispatch(setError(error))
+    );
+  };
+}
 
-const fetchUrlsFromFrontend = (current_section) => {
+const fetchLighouseDataFromBackend = (current_section) => {
+  return fetch('/lighthouse/klikk_' + current_section + '.json');
+}
+
+const fetchUrlsFromBackend = (current_section) => {
   return fetch('/json/klikk_' + current_section + '.json');
 }

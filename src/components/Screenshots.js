@@ -25,7 +25,8 @@ export default class Screenshots extends Component {
 	}
 
   scrollStart () {
-    this.props.fuff(this.props.reacteerState.sections[this.props.reacteerState.idx])
+    this.props.fuff(this.props.reacteerState.sections[this.props.reacteerState.idx]);
+    this.props.slhd(this.props.reacteerState.sections[this.props.reacteerState.idx]);
   }
 
   scrollDone () {
@@ -35,6 +36,7 @@ export default class Screenshots extends Component {
   scrollIteration () {
     this.props.incIndex();
     this.props.fuff(this.props.reacteerState.sections[this.props.reacteerState.idx]);
+    this.props.slhd(this.props.reacteerState.sections[this.props.reacteerState.idx]);
   }
 
   render() {

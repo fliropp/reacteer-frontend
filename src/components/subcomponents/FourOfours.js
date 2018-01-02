@@ -9,7 +9,7 @@ export default class FourOfours extends Component {
           <div className='urlentry'>
             <p className='urltxt'>link txt: {x[0]}</p>
             <p className='url'>url: {x[1]}</p>
-            <p classNamttp className="urlstatus">status: {typeof x[2] !== 'object'? x[2] : 'exception: not recognized as link!'}</p>
+            <p className="urlstatus">status: {typeof x[2] !== 'object'? x[2] : 'exception: not recognized as link!'}</p>
           </div>
         );
     }
@@ -23,8 +23,8 @@ export default class FourOfours extends Component {
   render() {
     return (
       <div className="fof">
-        <div className="fofHeader">404 STATS</div>
-        <div className="fofCount"><p>Number of non 200 OK: {this.fofCount(this.props.state.reacteerState.urlentries)}</p></div>
+        <div className="fofHeader">404 Stats (links on page)</div>
+        <div className="fofCount"><p>Number of non 200 OK links on page: {this.fofCount(this.props.state.reacteerState.urlentries)}</p></div>
         <div className="fofList">{this.fofList(this.props.state.reacteerState.urlentries)}</div>
       </div>
     );
