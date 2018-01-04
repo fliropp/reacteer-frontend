@@ -1,5 +1,3 @@
-import React, {Component} from 'react';
-
 export const INC_INDEX =  'INC_INDEX';
 export const SET_SECTIONS = 'SET_SECTIONS';
 export const SET_URLENTRIES = 'SET_URLENTRIES';

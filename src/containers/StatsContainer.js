@@ -1,8 +1,8 @@
 import * as actions from '../actions/actions.js'
-import { bindActionCreators } from 'redux'
+//import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import Stats from "../components/Stats.js";
-import store from "../reducers/roundRobin.js";
+//import store from "../reducers/roundRobin.js";
 
 const mapStateToProps = state => ({
   reacteerState: state

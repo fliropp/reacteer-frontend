@@ -1,4 +1,4 @@
-import React, {Component,Proptypes} from 'react';
+import React, {Component} from 'react';
 import FourOfours from './subcomponents/FourOfours.js';
 import LightHouse from './subcomponents/LightHouse.js'
 import '../css/Stats.css';

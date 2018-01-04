@@ -1,4 +1,4 @@
-import React, {Component,Proptypes} from 'react';
+import React, {Component} from 'react';
 import '../css/Screenshots.css';
 
 export default class Screenshots extends Component {
