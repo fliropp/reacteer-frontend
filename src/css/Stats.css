@@ -13,18 +13,19 @@ div .statsHeader {
   flex-direction: row;
   margin-top:10px;
   background-color: #b1cdcd;
-  height:40px;
+  height:30px;
   width:50%;
   border-radius: 25px;
   border: 1px solid #639c9c;
   font-size: 28px;
   justify-content: center;
-  padding-top:10px;
+  padding:3px;
   color:#334d4d;
 }
 
 div .statsItem {
   margin-top:15px;
+  width:90%;
 }
 
 div .urlentries {
@@ -44,7 +45,6 @@ div .fof, div .lighthouse {
   border-radius: 25px;
   border: 1px solid #639c9c;
   padding-top:10px;
-  width:800px;
   margin-bottom:15px;
 }
 
@@ -58,10 +58,8 @@ div .fofHeader, div .lhHeader {
   border-radius: 25px;
   border: 1px solid #639c9c;
   width:50%;
-  margin-top:5px;
-  padding-top:10px;
-  padding-bottom:10px;
-
+  padding:3px;
+  margin:6px;
 }
 
 div .fofCount {
@@ -72,10 +70,10 @@ div .fofCount {
   color:#334d4d;
   border-radius: 25px;
   border: 1px solid #639c9c;
-  margin-top: 20px;
-  padding:5px;
+  padding-left:5px;
   font-size: 12px;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 div .fofList, div .lhContainer {
@@ -85,14 +83,16 @@ div .fofList, div .lhContainer {
   justify-content: center;
   border-radius: 25px;
   border: 1px solid #639c9c;
-  margin-bottom: 20px;
-  margin-top:20px;
+  margin-bottom: 5px;
 }
 
 div .urlentry, div .lhEntry, div .lhEntry_header {
-  margin-top:20px;
-  margin-bottom:20px;
+  margin-top:10px;
+  margin-bottom:10px;
   margin-left:20px;
+  padding-left:15px;
+  padding-bottom: 5px;
+  padding-top:5px;
   display:flex;
   flex-direction: column;
   width:100%;
@@ -104,6 +104,12 @@ div .urlentry, div .lhEntry, div .lhEntry_header {
   border: 1px solid #639c9c;
 }
 
+div .urlentry p {
+  margin-top:2px;
+  margin-left:15px;
+  margin-bottom:2px;
+}
+
 .urltxt ,.url, .urlstatus {
   margin-left:15px;
 }
@@ -111,15 +117,19 @@ div .urlentry, div .lhEntry, div .lhEntry_header {
 div .lhEntry, div .lhEntry_header {
   display:flex;
   flex-direction: row;
-  padding:15px;
+  padding-left:15px;
+  padding-top:3px;
+  padding-bottom:3px;
   justify-content: space-around;
 }
 
 div .lhEntry_header {
   color:#d1e0e0;
-  padding-top:15px;
+  padding-top:3px;
+  padding-bottom: 3px;
   font-weight: bold;
   font-size: 16px;
+  background-color:#1f2e2e
 }
 
 div .lhKey, div .lhKey_header {
@@ -138,8 +148,6 @@ div .lhScore, div .lhScore_header {
 }
 
 div .lhDesc {
-  margin-top:20px;
-  margin-bottom:20px;
   margin-left:20px;
   display:flex;
   flex-direction: column;
