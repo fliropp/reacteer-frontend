@@ -9,6 +9,7 @@ const getInitState = () => {
     urlentries:[],
     lighthouseData: {},
     lhdActive : false,
+    helpTxt:'',
   }
 }
 
@@ -26,6 +27,8 @@ const roundRobin = (state = getInitState(), action) => {
       return {...state, lighthouseData: action.lhd}
     case actions.SET_ERROR:
       return {state, test: action.error}
+    case actions.SET_HELP_TXT:
+      return {...state, helpTxt: action.htxt}
     default:
       return state
   }

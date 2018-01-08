@@ -97,7 +97,7 @@ div .urlentry, div .lhEntry, div .lhEntry_header {
   flex-direction: column;
   width:100%;
   font-size: 12px;
-  width:85%;
+  width:75%;
   background-color: #3d5c5c;
   color:#e0ebeb;
   border-radius: 25px;

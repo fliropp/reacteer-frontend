@@ -1,8 +1,6 @@
 import * as actions from '../actions/actions.js'
-//import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
-import Stats from "../components/Stats.js";
-//import store from "../reducers/roundRobin.js";
+import Stats from '../components/Stats.js';
 
 const mapStateToProps = state => ({
   reacteerState: state
@@ -13,6 +11,7 @@ const mapDispatchToProps = (dispatch) => ({
   resetIndex: () => {dispatch(actions.resetIndex())},
   setSections: () => { dispatch(actions.setSections()) },
   setUrls: () => { dispatch(actions.setUrlEntries()) },
+  setHelpText: (txt) => {dispatch(actions.setHelpTxt(txt))}
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(Stats);
