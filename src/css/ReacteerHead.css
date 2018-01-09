@@ -1,0 +1,27 @@
+div .ReacteerHead {
+  width:100px;
+  background-color: #527a7a;
+}
+
+div .ReacteerHead img {
+  margin-top:30px;
+}
+
+div .toggleStatsButton {
+  margin-top:30px;
+}
+
+div .toggleStatsButton button{
+  background-color: #b1cdcd;
+  border:none;
+  border-radius: 25px;
+  border: 1px solid #639c9c;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight:bold;
+  color:#334d4d;
+
+}

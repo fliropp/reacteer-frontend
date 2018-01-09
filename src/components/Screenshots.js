@@ -43,6 +43,8 @@ export default class Screenshots extends Component {
     return (
       <div className="screenshot">
         <img className='scroll' ref='kpage' src={new Image().src ='/images/klikk_' + this.props.reacteerState.sections[this.props.reacteerState.idx] + '.png'}/>
+
+
       </div>
     );
   }

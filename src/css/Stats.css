@@ -1,11 +1,11 @@
 div .stats {
-  width:60%;
   display:flex;
   flex-direction:column;
   background-color: #e0ebeb;
   align-items: center;
   border-radius: 25px;
   border: 2px solid #639c9c;
+  width:50%
 }
 
 div .statsHeader {
@@ -21,6 +21,7 @@ div .statsHeader {
   justify-content: center;
   padding:3px;
   color:#334d4d;
+  margin-left: 164px;
 }
 
 div .statsItem {
@@ -175,4 +176,9 @@ div .lhInfo {
   margin-left:60px;
   margin-right:60px;
   color:#ffff1a;
+}
+
+.toggle {
+  width:100%;
+  margin-left: 90px;
 }

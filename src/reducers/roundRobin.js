@@ -9,8 +9,9 @@ const getInitState = () => {
     sections:['', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi'],
     urlentries:[],
     lighthouseData: {},
-    lhdActive : false,
+    lhdActive:false,
     helpTxt:{},
+    showStats:true,
   }
 }
 
@@ -30,6 +31,8 @@ const roundRobin = (state = getInitState(), action) => {
       return {...state, test: action.error}
     case actions.SET_HELP_TXT:
       return {...state, helpTxt: {[action.metric]:action.htxt}}
+    case actions.TOGGLE_STATS:
+      return {...state, showStats: !state.showStats}
     default:
       return state
   }

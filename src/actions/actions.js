@@ -6,13 +6,14 @@ export const SET_TEST = 'SET_TEST';
 export const SET_ERROR = 'SET_ERROR';
 export const SET_LIGHTHOUSE_DATA = 'SET_LIGHTHOUSE_DATA';
 export const SET_HELP_TXT = 'SET_HELP_TXT';
+export const TOGGLE_STATS = 'TOGGLE_STATS';
 
 export const incIndex  = () => {
   return { type: INC_INDEX };
 }
 
 export const resetIndex = () => {
-  return { type: RESET_INDEX };
+  return {type: RESET_INDEX};
 }
 
 export const setSections = (sections) => {
@@ -33,6 +34,10 @@ export const setError = (err) => {
 
 export const setHelpTxt = (htxt, metric) => {
   return {type: SET_HELP_TXT, htxt, metric}
+}
+
+export const toggleSts = () => {
+  return {type: TOGGLE_STATS}
 }
 
 export const fetchUrlEntries = (current_section) => {
