@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import HelpText from './HelpText.js';
+import HelpTextContainer from '../../containers/subcontainers/HelpTextContainer.js';
 
 const metrics = ["bootup-time","first-meaningful-paint", "consistently-interactive", "critical-request-chains", "offscreen-images",
                 "time-to-first-byte", "first-interactive", "link-blocking-first-paint", "dom-size", "speed-index-metric", "redirects",
@@ -13,13 +13,19 @@ export default class LightHouse extends Component {
       let key = this.props.state.reacteerState.lighthouseData[x].description;
       let score = this.props.state.reacteerState.lighthouseData[x].score;
       let value = this.props.state.reacteerState.lighthouseData[x].displayValue;
+      let chunk = {name: x, txt: this.props.state.reacteerState.lighthouseData[x].helpText }
       return(
-        <div className="lhEntry">
-          <div className="lhKey">{key}</div>
-          <div className="lhScore">{score}</div>
-          <div className="lhValue">{value}</div>
-          <HelpText state={this.props}/>
-        </div>
+          <div className="lhEntry">
+            <div className="lhMetric">
+              <div className="lhKey">{key}</div>
+              <div className="lhScore">{score}</div>
+              <div className="lhValue">{value}</div>
+              <HelpTextContainer state={chunk}/>
+            </div>
+
+            <div className="lhInfo">
+             {this.props.state.reacteerState.helpTxt[x]}</div>
+          </div>
       );
     });
   }
@@ -46,8 +52,7 @@ export default class LightHouse extends Component {
               <div className="lhValue_header">VALUE</div>
             </div>
 
-            <div className="lhMetric">{this.metricsList()}</div>
-            <div className="lhHelpTxt">{this.props.state.reacteerState.helptxt}</div>
+            <div className="lhMetrics">{this.metricsList()}</div>
           </div>
         </div>
       );

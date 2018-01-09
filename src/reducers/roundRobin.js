@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import * as actions from '../actions/actions.js';
+import update from 'react-addons-update';
 
 const getInitState = () => {
   return {
@@ -9,7 +10,7 @@ const getInitState = () => {
     urlentries:[],
     lighthouseData: {},
     lhdActive : false,
-    helpTxt:'',
+    helpTxt:{},
   }
 }
 
@@ -26,9 +27,9 @@ const roundRobin = (state = getInitState(), action) => {
     case actions.SET_LIGHTHOUSE_DATA:
       return {...state, lighthouseData: action.lhd}
     case actions.SET_ERROR:
-      return {state, test: action.error}
+      return {...state, test: action.error}
     case actions.SET_HELP_TXT:
-      return {...state, helpTxt: action.htxt}
+      return {...state, helpTxt: {[action.metric]:action.htxt}}
     default:
       return state
   }

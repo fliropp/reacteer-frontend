@@ -11,7 +11,6 @@ const mapDispatchToProps = (dispatch) => ({
   resetIndex: () => {dispatch(actions.resetIndex())},
   setSections: () => { dispatch(actions.setSections()) },
   setUrls: () => { dispatch(actions.setUrlEntries()) },
-  setHelpText: (txt) => {dispatch(actions.setHelpTxt(txt))}
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(Stats);

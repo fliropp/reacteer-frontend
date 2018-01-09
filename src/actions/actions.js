@@ -31,8 +31,8 @@ export const setError = (err) => {
   return {type: SET_ERROR, err}
 }
 
-export const setHelpTxt = (htxt) => {
-  return {type: SET_HELP_TXT, htxt}
+export const setHelpTxt = (htxt, metric) => {
+  return {type: SET_HELP_TXT, htxt, metric}
 }
 
 export const fetchUrlEntries = (current_section) => {

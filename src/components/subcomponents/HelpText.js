@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class FourOfours extends Component {
+export default class HelpText extends Component {
 
   constructor(props) {
     super(props);
@@ -13,9 +13,9 @@ export default class FourOfours extends Component {
   handleMouseHover() {
     this.setState(this.toggleHoverState);
     if(this.state.isHovering){
-      this.props.setHelpText("");
+      this.props.setHelpText("", this.props.name);
     }else{
-      this.props.setHelpText("Help yerself, Dude...!");
+      this.props.setHelpText(this.props.state.txt, this.props.state.name);
     }
   }
 
