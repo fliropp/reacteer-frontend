@@ -13,12 +13,13 @@ export default class LightHouse extends Component {
       let key = this.props.state.reacteerState.lighthouseData[x].description;
       let score = this.props.state.reacteerState.lighthouseData[x].score;
       let value = this.props.state.reacteerState.lighthouseData[x].displayValue;
-      let chunk = {name: x, txt: this.props.state.reacteerState.lighthouseData[x].helpText }
+      let chunk = {name: x, txt: this.props.state.reacteerState.lighthouseData[x].helpText}
       return(
           <div className="lhEntry">
             <div className="lhMetric">
               <div className="lhKey">{key}</div>
               <div className="lhScore">{score}</div>
+              <img className="lhScoreColor" src={this.calcColorCode(score)} height='10px'/>
               <div className="lhValue">{value}</div>
               <HelpTextContainer state={chunk}/>
             </div>
@@ -28,6 +29,16 @@ export default class LightHouse extends Component {
           </div>
       );
     });
+  }
+
+  calcColorCode(scr) {
+    if(scr) {
+      if(scr < 45){return 'score_red.png'};
+      if(scr > 44 && scr < 75){return 'score_org.png'};
+      if(scr > 74){return 'score_grn.png'};
+    }else {
+      return 'score_nan.png';
+    }
   }
 
   render() {

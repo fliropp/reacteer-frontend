@@ -146,11 +146,24 @@ div .lhKey, div .lhKey_header {
 div .lhValue, div .lhValue_header {
   width:50%;
   justify-content: left;
+  margin-left:10px;
 }
 
-div .lhScore, div .lhScore_header {
+div .lhScore_header {
   width:25%;
   justify-content: left;
+  margin-left:10px;
+}
+
+div .lhScore {
+  width:5%;
+  justify-content: left;
+  margin-left:10px;
+}
+
+div .lhScoreColor {
+  justify-content: left;
+  margin-left:10px;
 }
 
 div .lhDesc {
