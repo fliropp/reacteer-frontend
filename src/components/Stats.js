@@ -10,8 +10,8 @@ export default class Stats extends Component {
   render() {
     return (
 
+      <ToggleDisplay className="toggle" show = {typeof(this.props.state) === 'undefined'? true : this.props.reacteerState.showStats}>
       <div className="stats">
-        <ToggleDisplay className="toggle" show = {typeof(this.props.state) === 'undefined'? true : this.props.reacteerState.showStats}>
         <div className="statsHeader">
           klikk/{this.props.reacteerState.sections[this.props.reacteerState.idx] }
         </div>
@@ -19,8 +19,9 @@ export default class Stats extends Component {
           <FourOfours state={this.props}/>
           <LightHouse state={this.props}/>
         </div>
-        </ToggleDisplay>
       </div>
+      </ToggleDisplay>
+      
     );
   }
 }

@@ -5,7 +5,7 @@ div .stats {
   align-items: center;
   border-radius: 25px;
   border: 2px solid #639c9c;
-  width:50%
+  width:100%
 }
 
 div .statsHeader {
@@ -21,7 +21,6 @@ div .statsHeader {
   justify-content: center;
   padding:3px;
   color:#334d4d;
-  margin-left: 164px;
 }
 
 div .statsItem {
@@ -45,7 +44,6 @@ div .fof, div .lighthouse {
   background-color: #85adad;
   border-radius: 25px;
   border: 1px solid #639c9c;
-  padding-top:10px;
   margin-bottom:15px;
 }
 
@@ -60,7 +58,7 @@ div .fofHeader, div .lhHeader {
   border: 1px solid #639c9c;
   width:50%;
   padding:3px;
-  margin:6px;
+  margin:10px;
 }
 
 div .fofCount {
@@ -123,7 +121,6 @@ div .lhEntry {
 div .lhMetric, div .lhEntry_header {
   display:flex;
   flex-direction: row;
-  padding-left:15px;
   padding-top:3px;
   padding-bottom:3px;
   justify-content: space-around;
@@ -156,13 +153,13 @@ div .lhScore, div .lhScore_header {
 }
 
 div .lhDesc {
-  margin-left:20px;
   display:flex;
   flex-direction: column;
   font-size: 10px;
-  color:#1f2e2e;
+  font-weight:bolder;
+  color:#e0ebeb;
   width:85%;
-  background-color: #669999;
+  background-color: #5c8a8a;
   border-radius: 25px;
   border: 1px solid #639c9c;
   padding:10px;
@@ -173,12 +170,11 @@ div .lhDescWrapper {
 }
 
 div .lhInfo {
-  margin-left:60px;
-  margin-right:60px;
+  padding-left:10px;
+  padding-right:10px;
   color:#ffff1a;
 }
 
 .toggle {
-  width:100%;
-  margin-left: 90px;
+  width:40%;
 }

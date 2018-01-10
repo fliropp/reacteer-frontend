@@ -39,12 +39,17 @@ export default class Screenshots extends Component {
     this.props.slhd(this.props.reacteerState.sections[this.props.reacteerState.idx]);
   }
 
+  getObjectFit() {
+    return this.props.reacteerState.showStats ? 'contain' : 'none';
+  }
+
+
   render() {
+    let screenshot_style = {width: this.props.reacteerState.showStats ? '60%' : '100%', height : 'auto'}
+    let img_style = {width: this.props.reacteerState.showStats ? '100%' : 'auto', height : 'auto'}
     return (
-      <div className="screenshot">
-        <img className='scroll' ref='kpage' src={new Image().src ='/images/klikk_' + this.props.reacteerState.sections[this.props.reacteerState.idx] + '.png'}/>
-
-
+      <div className="screenshot" style={screenshot_style}>
+        <img className='scroll' ref='kpage' style={img_style}src={new Image().src ='/images/klikk_' + this.props.reacteerState.sections[this.props.reacteerState.idx] + '.png'}/>
       </div>
     );
   }

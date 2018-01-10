@@ -1,7 +1,10 @@
 div .screenshot {
   width: 60%;
-  display:flex;
-  flex-direction:row;
+}
+
+div .screenshot img {
+  width:100%;
+  height:auto;
 }
 
 .scroll {
@@ -17,7 +20,7 @@ div .screenshot {
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes klikkscroll {
-    from {top: 500px;}
+    from {top: 0px;}
     to {bottom: 200px;}
 }
 
