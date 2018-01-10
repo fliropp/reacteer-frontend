@@ -1,6 +1,7 @@
 div .ReacteerHead {
   width:5%;
   background-color: #527a7a;
+  border: 4px solid #639c9c;
 }
 
 div .ReacteerHead img {
@@ -23,5 +24,5 @@ div .toggleStatsButton button{
   font-size: 12px;
   font-weight:bold;
   color:#334d4d;
-
+  width: 80px;
 }

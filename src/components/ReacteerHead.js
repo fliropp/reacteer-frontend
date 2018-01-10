@@ -11,7 +11,7 @@ export default class ReacteerHead extends Component {
   render() {
     return (
       <div className="ReacteerHead">
-        <img src="http://localhost:3000/ricon.png" height='50px'/>
+        <img src="/ricon.png" height='50px'/>
         <div className="toggleStatsButton">
           <button onClick= {() => this.toggleStats()}>{this.props.reacteerState.showStats? 'hide stats': 'show stats'}</button>
         </div>

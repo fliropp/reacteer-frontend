@@ -1,9 +1,10 @@
 div .screenshot {
   width: 60%;
+  background-color: #94b8b8;
 }
 
 div .screenshot img {
-  width:100%;
+  width:95%;
   height:auto;
 }
 

@@ -1,11 +1,12 @@
 div .stats {
   display:flex;
   flex-direction:column;
-  background-color: #e0ebeb;
+  background-color: #94b8b8;
   align-items: center;
   border-radius: 25px;
-  border: 2px solid #639c9c;
-  width:100%
+  border: 4px solid #639c9c;
+  width:97%;
+  margin-top:10px;
 }
 
 div .statsHeader {
@@ -177,4 +178,5 @@ div .lhInfo {
 
 .toggle {
   width:40%;
+  background-color: #94b8b8;
 }
