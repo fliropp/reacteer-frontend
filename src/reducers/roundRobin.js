@@ -8,7 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 const getInitState = () => {
   return {
     idx:0,
-    sections:['', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi'],
+    sections:['klikk', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi', 'egmont'],
     urlentries:[],
     lighthouseData: {},
     lhdActive:false,
