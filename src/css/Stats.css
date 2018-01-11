@@ -146,7 +146,6 @@ div .lhKey, div .lhKey_header {
 div .lhValue, div .lhValue_header {
   width:50%;
   justify-content: left;
-  margin-left:10px;
 }
 
 div .lhScore_header {
@@ -179,11 +178,21 @@ div .lhDesc {
   padding:10px;
 }
 
+div .lhDetails {
+  width: 85%;
+  margin-left: 10px;
+}
+
+div .lhJson {
+  color: #75a3a3;
+}
+
 div .lhDescWrapper {
   margin-right: -100px;
 }
 
 div .lhInfo {
+  font-size:11px;
   padding-left:10px;
   padding-right:10px;
   color:#ffff1a;

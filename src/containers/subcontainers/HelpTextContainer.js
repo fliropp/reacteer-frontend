@@ -7,7 +7,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setHelpText: (txt, metric) => {dispatch(actions.setHelpTxt(txt, metric))}
+  setHelpText: (txt, metric) => {dispatch(actions.setHelpTxt(txt, metric))},
+  deleteHelpText: (metric) => {dispatch(actions.deleteHelpTxt(metric))},
+  setDetails: (details, metric) => {dispatch(actions.setDetails(details, metric))},
+  deleteDetails: (metric) => {dispatch(actions.deleteDetails(metric))},
+
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(HelpText);

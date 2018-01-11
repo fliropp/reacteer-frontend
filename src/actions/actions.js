@@ -6,6 +6,9 @@ export const SET_TEST = 'SET_TEST';
 export const SET_ERROR = 'SET_ERROR';
 export const SET_LIGHTHOUSE_DATA = 'SET_LIGHTHOUSE_DATA';
 export const SET_HELP_TXT = 'SET_HELP_TXT';
+export const DELETE_HELP_TXT = 'DELETE_HELP_TXT';
+export const SET_DETAILS = 'SET_DETAILS';
+export const DELETE_DETAILS = 'DELETE_DETAILS';
 export const TOGGLE_STATS = 'TOGGLE_STATS';
 
 export const incIndex  = () => {
@@ -34,6 +37,18 @@ export const setError = (err) => {
 
 export const setHelpTxt = (htxt, metric) => {
   return {type: SET_HELP_TXT, htxt, metric}
+}
+
+export const deleteHelpTxt = (metric) => {
+  return {type: DELETE_HELP_TXT, metric}
+}
+
+export const setDetails = (details, metric) => {
+  return {type: SET_DETAILS, details, metric}
+}
+
+export const deleteDetails = (metric) => {
+  return {type: DELETE_DETAILS, metric}
 }
 
 export const toggleSts = () => {

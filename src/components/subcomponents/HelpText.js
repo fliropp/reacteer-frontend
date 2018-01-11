@@ -13,9 +13,12 @@ export default class HelpText extends Component {
   handleMouseHover() {
     this.setState(this.toggleHoverState);
     if(this.state.isHovering){
-      this.props.setHelpText("", this.props.name);
+      this.props.deleteHelpText(this.props.state.name);
+      this.props.deleteDetails(this.props.state.name)
     }else{
       this.props.setHelpText(this.props.state.txt, this.props.state.name);
+      this.props.setDetails(this.props.state.details, this.props.state.name);
+
     }
   }
 

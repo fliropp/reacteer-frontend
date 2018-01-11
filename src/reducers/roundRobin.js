@@ -2,6 +2,8 @@ import { createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import * as actions from '../actions/actions.js';
 import update from 'react-addons-update';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 
 const getInitState = () => {
   return {
@@ -11,6 +13,7 @@ const getInitState = () => {
     lighthouseData: {},
     lhdActive:false,
     helpTxt:{},
+    details:{},
     showStats:true,
   }
 }
@@ -31,6 +34,12 @@ const roundRobin = (state = getInitState(), action) => {
       return {...state, test: action.error}
     case actions.SET_HELP_TXT:
       return {...state, helpTxt: {[action.metric]:action.htxt}}
+    case actions.DELETE_HELP_TXT:
+      return {...state, helpTxt: ""}
+    case actions.SET_DETAILS:
+      return {...state, details: {[action.metric]:action.details}}
+    case actions.DELETE_DETAILS:
+      return {...state, details: ""}
     case actions.TOGGLE_STATS:
       return {...state, showStats: !state.showStats}
     default:
@@ -38,6 +47,7 @@ const roundRobin = (state = getInitState(), action) => {
   }
 }
 
-let store = createStore(roundRobin, applyMiddleware(thunk));
+let store = createStore(roundRobin, composeWithDevTools(applyMiddleware(thunk)));
+
 
 export default store;
