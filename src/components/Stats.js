@@ -13,7 +13,7 @@ export default class Stats extends Component {
       <ToggleDisplay className="toggle" show = {typeof(this.props.state) === 'undefined'? true : this.props.reacteerState.showStats}>
       <div className="stats">
         <div className="statsHeader">
-          klikk/{this.props.reacteerState.sections[this.props.reacteerState.idx] }
+          {this.props.reacteerState.sections[this.props.reacteerState.idx] }
         </div>
         <div className="statsItem">
           <FourOfours state={this.props}/>
@@ -21,7 +21,7 @@ export default class Stats extends Component {
         </div>
       </div>
       </ToggleDisplay>
-      
+
     );
   }
 }

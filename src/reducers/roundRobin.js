@@ -10,7 +10,7 @@ const getInitState = () => {
     idx:0,
     sections:[
               'egmont', 'klikk', 'side2', 'side3',
-              'blogg', 'klikk/foreldre', 'egmontlive',
+              'blogg', 'klikk-foreldre', 'egmontlive',
               'filmweb', 'egmontpeople', 'kvinneguiden',
               'kryssord', 'egmontblogg'
             ],
