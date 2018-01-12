@@ -82,9 +82,9 @@ export const fetchLightHouseData = (current_section) => {
 }
 
 const fetchLighouseDataFromBackend = (current_section) => {
-  return fetch('/lighthouse/klikk_' + current_section + '.json');
+  return fetch('/lighthouse/' + current_section + '.json');
 }
 
 const fetchUrlsFromBackend = (current_section) => {
-  return fetch('/json/klikk_' + current_section + '.json');
+  return fetch('/json/' + current_section + '.json');
 }
