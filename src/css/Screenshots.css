@@ -32,10 +32,10 @@ div .screenshot img {
       }
       100% {
         /*opacity: 0; */
-        transform: translate(0px, -3000px);
+        transform: translate(0px, -5000px);
       }
       0% {
-        opacity: 0;
+        opacity: 1;
       }
       4% {
         opacity: 1;

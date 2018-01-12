@@ -8,7 +8,12 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 const getInitState = () => {
   return {
     idx:0,
-    sections:['klikk', 'helse', 'motor', 'bolig', 'mote', 'mat', 'teknologi', 'egmont'],
+    sections:[
+              'egmont', 'klikk', 'side2', 'side3',
+              'blogg', 'klikk/foreldre', 'egmontlive',
+              'filmweb', 'egmontpeople', 'kvinneguiden',
+              'kryssord', 'egmontblogg'
+            ],
     urlentries:[],
     lighthouseData: {},
     lhdActive:false,
