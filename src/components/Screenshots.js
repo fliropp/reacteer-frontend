@@ -46,7 +46,7 @@ export default class Screenshots extends Component {
 
   render() {
     let screenshot_style = {width: this.props.reacteerState.showStats ? '60%' : '100%', height : 'auto'}
-    let img_style = {width: this.props.reacteerState.showStats ? '95%' : 'auto', height : 'auto'}
+    let img_style = {width: this.props.reacteerState.showStats ? '95%' : '85%', height : 'auto'}
     return (
       <div className="screenshot" style={screenshot_style}>
         <img className='scroll' ref='kpage' style={img_style}src={new Image().src ='/images/' + this.props.reacteerState.sections[this.props.reacteerState.idx] + '.png'}/>
