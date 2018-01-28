@@ -15,8 +15,10 @@ div .screenshot img {
   /*animation: klikkscroll 25s infinite;*/
   animation-duration: 60s;
   animation-name: klikkscroll;
+  animation-delay: 2s;
   /*animation-iteration-count: 5;*/
   animation-timing-function: ease-out;
+  will-change: transform, width;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -27,20 +29,18 @@ div .screenshot img {
 
 @keyframes klikkscroll {
       0% {
-        width:10%;
         opacity: 0;
-        transform: translate(0%, 0px);
+        transform: translate(0px, 50px) scale(0);
       }
-      10% {
-        transform: translate(0%, 0px);
+      3% {
+        transform: translate(0px, 50px) scale(0.85);
         opacity:1;
-        width:85%;
       }
       96% {
         opacity: 1;
       }
       100% {
-        transform: translate(0%, -90%);
+        transform: translate(0px, -90%) scale(0.85);
         opacity: 0;
       }
 
