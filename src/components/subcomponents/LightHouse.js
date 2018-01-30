@@ -12,7 +12,7 @@ export default class LightHouse extends Component {
   metricsList() {
     this.setState();
     return metrics.map((x) => {
-      let {description, score, displayValue, helpText, extendedInfo} = this.props.state.reacteerState.lighthouseData[x];
+      let {description, score, displayValue, helpText, extendedInfo} = this.props.state.reacteerState.lighthouseData.audits[x];
       let chunk = {name: x, txt: helpText, details: extendedInfo};
       return(
           <div className="lhEntry">
