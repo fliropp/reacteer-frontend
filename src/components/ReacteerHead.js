@@ -8,13 +8,17 @@ export default class ReacteerHead extends Component {
     this.props.toggleStats();
   }
 
+  jump2(index) {
+    this.props.jump2(index);
+  }
+
   getSiteList(sites) {
     let img_style = '';
     return this.props.reacteerState.sections.map((site) => {
       img_style = this.props.reacteerState.sections[this.props.reacteerState.idx] === site? {backgroundColor:'#b3cccc'} : {backgroundColor:'#527a7a'};
       return(
       <div className="siteListing" style={img_style}>
-      <p className="siteName">{site}</p>
+      <p className="siteName" onClick={() => this.jump2(this.props.reacteerState.sections.indexOf(site))}>{site}</p>
       <div className="siteFavicon">
         <img src={new Image().src ='/favicons/' + site + '.png'}/>
       </div>

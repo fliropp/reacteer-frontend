@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   toggleStats: () => {dispatch(actions.toggleSts())},
+  jump2: (idx) => {dispatch(actions.setIndex(idx))},
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(ReacteerHead);

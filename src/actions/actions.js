@@ -2,6 +2,7 @@ export const INC_INDEX =  'INC_INDEX';
 export const SET_SECTIONS = 'SET_SECTIONS';
 export const SET_URLENTRIES = 'SET_URLENTRIES';
 export const RESET_INDEX = 'RESET_INDEX';
+export const SET_INDEX = 'SET_INDEX';
 export const SET_TEST = 'SET_TEST';
 export const SET_ERROR = 'SET_ERROR';
 export const SET_LIGHTHOUSE_DATA = 'SET_LIGHTHOUSE_DATA';
@@ -17,6 +18,10 @@ export const incIndex  = () => {
 
 export const resetIndex = () => {
   return {type: RESET_INDEX};
+}
+
+export const setIndex = (idx) => {
+  return {type: SET_INDEX, idx};
 }
 
 export const setSections = (sections) => {

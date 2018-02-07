@@ -19,7 +19,7 @@ const getInitState = () => {
     lhdActive:false,
     helpTxt:{},
     details:{},
-    showStats:true,
+    showStats:false,
   }
 }
 
@@ -29,6 +29,8 @@ const roundRobin = (state = getInitState(), action) => {
       return {...state, idx: (state.idx + 1) % state.sections.length}
     case actions.RESET_INDEX:
       return  { ...state, idx: 0 }
+    case actions.SET_INDEX:
+      return {...state, idx: action.idx}
     case actions.SET_SECTIONS:
       return  { ...state, sections: action.sections }
     case actions.SET_URLENTRIES:
